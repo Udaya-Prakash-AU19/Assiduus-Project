@@ -149,7 +149,7 @@ export default function CurveChart() {
       >
         <Select
           id="actions"
-          value={selectedAction.key}
+          value={selectedAction.key || CURVE_CHART_ACTIONS[0].key}
           sx={{
             width: "120px",
             height: "30px",
@@ -172,7 +172,7 @@ export default function CurveChart() {
         <Select
           id="months"
           size="small"
-          value={selectedMonth.key}
+          value={selectedMonth.key || MONTHS_LIST[0].key}
           sx={{
             width: "120px",
             height: "30px",
@@ -208,7 +208,6 @@ export default function CurveChart() {
           variant="h6"
           sx={{
             py: 2.5,
-            pl: 2,
             height: "20%",
           }}
         >
@@ -240,6 +239,7 @@ export default function CurveChart() {
         bgcolor: "white",
         height: "100%",
         borderRadius: "10px",
+        minWidth: "540px",
       }}
     >
       {renderTopSection()}

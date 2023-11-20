@@ -41,11 +41,11 @@ const createRowData = (id, name, this_month, ytd) => ({
 });
 
 const tableData = [
-  createRowData(1, "Sales", 1194.58, 11418, 29),
-  createRowData(2, "Advertising", 6879.02, 9271, 36),
-  createRowData(3, "Inventory", 4692.26, 9768.09),
-  createRowData(4, "Entertainment", 0.0, 0.0),
-  createRowData(5, "Product", 4652.1, 2529.9),
+  createRowData(1, "Sales", "1,194.58", "11,418.29"),
+  createRowData(2, "Advertising", "6,879.02", "9,271.36"),
+  createRowData(3, "Inventory", "4,692.26", "9,768.09"),
+  createRowData(4, "Entertainment", "0.00", "0.00"),
+  createRowData(5, "Product", "4,652.10", "2,529.90"),
 ];
 
 export default function AccountWatchList() {

@@ -210,6 +210,7 @@ function SingleBarschart({ dataset = [], title = "" }) {
         bgcolor: "white",
         height: "100%",
         borderRadius: "10px",
+        minWidth: "550px",
       }}
     >
       {renderTopSection()}

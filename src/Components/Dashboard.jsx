@@ -13,7 +13,7 @@ export default function Dashboard() {
   return (
     <>
       <Grid container direction="row">
-        <Grid item xs={2}>
+        <Grid item xs={2} sx={{ minWidth: "200px" }}>
           <LeftNavbar />
         </Grid>
         <Grid
@@ -25,7 +25,6 @@ export default function Dashboard() {
           sx={{
             bgcolor: "#F4F6F7",
             p: 2,
-            ml: "-27px",
           }}
         >
           <Grid item xs={6}>

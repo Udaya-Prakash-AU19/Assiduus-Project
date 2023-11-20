@@ -4,8 +4,8 @@ import {
   ListItemIcon,
   ListItemText,
   Typography,
-  List,
   ListItemButton,
+  ListItem,
 } from "@mui/material";
 
 import {
@@ -39,17 +39,15 @@ export default function LeftNavbar() {
     navigate(`/${menuItemKey}`);
   };
 
-  console.log({ checkLocation: window.location });
-
   return (
     <AppBar
-      position="static"
+      position="relative"
       elevation={0}
       sx={{
-        width: "200px",
         bgcolor: "white",
         color: "black",
-        height: "100vh",
+        height: "100%",
+        width: "100%",
       }}
     >
       <MenuList
@@ -59,12 +57,15 @@ export default function LeftNavbar() {
       >
         {LEFT_NAV_MENU.map((item) => {
           const MenuItemIcon = menuItemIcons[item.key];
-          const activeMenuClass = window.location.pathname.includes(item.key)
-            ? "active-menu-item"
-            : "";
+          console.log("my path", window.location.pathname);
+          const activeMenuClass =
+            window.location.pathname.includes(item.key) ||
+            (window.location.pathname === "/" && item.key === "dashboard")
+              ? "active-menu-item"
+              : "";
 
           return (
-            <List
+            <ListItem
               className={`left-nav-list ${activeMenuClass}`}
               disablePadding
               component={"nav"}
@@ -88,7 +89,7 @@ export default function LeftNavbar() {
                   </Typography>
                 </ListItemText>
               </ListItemButton>
-            </List>
+            </ListItem>
           );
         })}
       </MenuList>

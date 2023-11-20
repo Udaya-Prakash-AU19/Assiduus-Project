@@ -111,17 +111,19 @@ export default function MultipleBarschart({ dataset = [], title = "" }) {
 
   const renderChartSection = () => {
     return (
-      <Box>
+      <Box sx={{ textAlign: "center" }}>
         <svg className="barchart" ref={ref}></svg>
       </Box>
     );
   };
+
   return (
     <Box
       sx={{
         bgcolor: "white",
         height: "100%",
         borderRadius: "10px",
+        minWidth: "540px",
       }}
     >
       {renderTopSection()}
