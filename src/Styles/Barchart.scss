@@ -1,0 +1,44 @@
+$single-bar-color: #27b315;
+$double-bar-outer-color: #24b37a;
+$double-bar-inner-color: #53cd43;
+
+%bar-legend {
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+}
+
+.barchart {
+    background-color: white;
+    padding: 0 15px 15px;
+    box-sizing: border-box;
+
+    .single-bar {
+        fill: $single-bar-color;
+    }
+
+    .outer-bar {
+        fill: $double-bar-outer-color;
+    }
+
+    .inner-bar {
+        fill: $double-bar-inner-color;
+    }
+
+    .x-text {
+        fill: #bdbdbd;
+        font-size: 11px;
+        font-weight: 600;
+    }   
+}
+
+.outer-bar-legend {
+    @extend %bar-legend;
+    background-color: $double-bar-outer-color;
+}
+
+.inner-bar-legend {
+    @extend %bar-legend;
+    background-color: $double-bar-inner-color;
+    margin-left: 10px;
+}
